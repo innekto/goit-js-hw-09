@@ -39,7 +39,7 @@ function createPromise(position, delay) {
 
 //оновлюємо проміси циклом
 function promisesCycle() {
-  for (i = 1; i <= inputValues.amount; i += 1) {
+  for (let i = 1; i <= inputValues.amount; i += 1) {
     createPromise(i, inputValues.delay)
       .then(({ position, delay }) => {
         Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
